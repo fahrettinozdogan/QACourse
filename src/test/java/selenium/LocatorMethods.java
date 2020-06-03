@@ -2,8 +2,6 @@ package selenium;
 
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
-import io.cucumber.java.sl.In;
-import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
@@ -23,9 +21,9 @@ public class LocatorMethods {
     public static WebDriverWait wait;
 
 
-    @Before
+//    @Before
     public void setDriver() throws IOException {
-        System.setProperty("webdriver.chrome.driver","drivers/chromedriver");
+        System.setProperty("webdriver.chrome.driver","drivers/chromedriver81ForMac");
         driver=new ChromeDriver();
         wait=new WebDriverWait(driver,10);
         initProperties();
@@ -39,7 +37,7 @@ public class LocatorMethods {
         locatorType.load(inputStream2);
     }
 
-    @After
+//    @After
     void quit() {
         driver.quit();
     }
